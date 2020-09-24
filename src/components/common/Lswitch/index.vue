@@ -1,12 +1,8 @@
 <template>
-  <div
-    :class="size+'-cheek'"
-    :style="'background:'+innerDisabled?'rgb(160 211 255)':innerDisabled?'':'rgba(25, 31, 37, 0.12)'"
-    @click="onChange"
-  >
-    <span :class="size+'-round'" :style="innerValue ? 'right:0.02em' : 'left:0.02em'"></span>
-    <span v-if="activeText" :class="size+'-text-on'">{{activeText}}</span>
-    <span v-if="unActiveText" :class="size+'-text-off'">{{unActiveText}}</span>
+  <div :class="[size, { disabled: disabled }]" @click="onChange">
+    <span class="round" :data-set="innerValue ? 'receive' : 'reject'"></span>
+    <span v-if="activeText" class="text-on">{{ activeText }}</span>
+    <span v-if="unActiveText" class="text-off">{{ unActiveText }}</span>
   </div>
 </template>
 
@@ -46,13 +42,9 @@ export default {
       this.$emit("onChange", this.innerValue);
     },
   },
-  computed: {
-    // move() {
-    //   return this.innerValue ? "right:0.02em" : "left:0.02em";
-    // },
-  },
+  computed: {},
 };
 </script>
 <style scoped>
-@import "~css/components/Lswitch/Lswitch.css";
+@import "~css/components/Lswitch.css";
 </style>

@@ -1,17 +1,8 @@
-.disabled {
-  background-color: #a0d3ff;
-  border-color: #a0d3ff;
-}
+@import '../style/index.scss';
 
-.off {
-  background-color: rgba(25, 31, 37, 0.12);
-}
+$switch-round-height:$switch-height - 0.04em;
 
-.disappear {
-  visibility: hidden;
-}
-
-.small-cheek {
+.small {
   position: relative;
   display: inline-block;
   width: 0.64em;
@@ -19,64 +10,84 @@
   line-height: 0.42em;
   background-color: rgba(16, 142, 233, 1);
   border-radius: 0.21em;
+
+  .round {
+    position: absolute;
+    right: 0.02em;
+    top: 0.02em;
+    width: 0.35em;
+    height: 0.35em;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0em 0.06em 0.08em 0em rgba(0, 0, 0, 0.3), 0em 0.2em 0.4em 0em rgba(0, 0, 0, 0.1);
+    border: 0.02em solid rgba(229, 229, 229, 1);
+    transition: all 0.2s;
+  }
+
+  .text-on {
+    margin-left: 0.08em;
+    color: #fff;
+  }
+
+  .text-off {
+    margin-left: 0.13em;
+    color: #fff;
+  }
 }
 
-.small-cheek .small-round {
-  position: absolute;
-  right: 0.02em;
-  top: 0.02em;
-  width: 0.35em;
-  height: 0.35em;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 1);
-  box-shadow: 0em 0.06em 0.08em 0em rgba(0, 0, 0, 0.3), 0em 0.2em 0.4em 0em rgba(0, 0, 0, 0.1);
-  border: 0.02em solid rgba(229, 229, 229, 1);
-  transition: all 0.2s;
-}
-
-.small-text-on {
-  margin-left: 0.08em;
-  color: #fff;
-}
-
-.small-text-off {
-  margin-left: 0.13em;
-  color: #fff;
-}
-
-.normal-cheek {
+.normal {
   position: relative;
   display: inline-block;
-  width: 2.52em;
-  height: 1.24em;
-  line-height: 1.24em;
-  background-color: orange;
-  border-radius: 0.62em;
-}
+  width: $switch-width;
+  height: $switch-height;
+  line-height: $switch-height;
+  background-color: $color-primary-0;
+  border-radius: $switch-height / 2;
 
-.normal-cheek .normal-round {
-  position: absolute;
-  width: 1.2em;
-  height: 1.2em;
-  border-radius: 50%;
-  background-color: white;
-  box-shadow: 0.05em 0em 1em 0px rgba(0, 0, 0, 0.3);
-  border: 0.02em solid #e5e5e5;
-  transition: all 0.2s;
-}
+  .round {
+    position: absolute;
+    height: $switch-round-height;
+    border-radius: $switch-round-height/2;
+    background-color: #fff;
+    box-shadow: 0.05em 0em 1em 0px rgba(0, 0, 0, 0.3);
+    border: 0.02em solid #e5e5e5;
+    transition: all 0.2s;
 
-.normal-text-on {
-  margin-left: 1em;
-  color: #fff;
-}
+    &[data-set="receive"] {
+      left: 0.02em;
+      right: $switch-width - $switch-round-height;
+    }
 
-.normal-text-off {
-  margin-left: 2em;
-  color: #fff;
+    &[data-set="reject"] {
+      right: 0.02em;
+      left: $switch-width - $switch-round-height;
+    }
+
+    &[data-set="receive"]:active {
+      left: 0.02em;
+      right: $switch-width - $switch-round-height - 0.2em;
+    }
+
+    &[data-set="reject"]:active {
+      right: 0.02em;
+      left: $switch-width - $switch-round-height - 0.2em;
+    }
+
+  }
+
+  .text-on {
+    margin-left: 1em;
+    color: #fff;
+  }
+
+  .text-off {
+    margin-left: 2em;
+    color: #fff;
+  }
 }
 
 /* 所有的实现都暂时搁置*/
-.large-cheek {
+.large {
   position: relative;
   display: inline-block;
   width: 1.36em;
@@ -85,27 +96,33 @@
   font-size: 0.35em;
   background-color: rgba(16, 142, 233, 1);
   border-radius: 0.41em;
+
+  .round {
+    position: absolute;
+    left: 0.57em;
+    top: 0.02em;
+    width: 0.76em;
+    height: 0.76em;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0em 0.06em 0.08em 0em rgba(0, 0, 0, 0.3), 0em 0.2em 0.4em 0em rgba(0, 0, 0, 0.1);
+    border: 0.02em solid rgba(229, 229, 229, 1);
+    transition: all 0.2s;
+  }
+
+  .text-on {
+    margin-left: 0.15em;
+    color: #fff;
+  }
+
+  .text-off {
+    margin-left: 0.25em;
+    color: #fff;
+  }
 }
 
-.large-cheek .large-round {
-  position: absolute;
-  left: 0.57em;
-  top: 0.02em;
-  width: 0.76em;
-  height: 0.76em;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 1);
-  box-shadow: 0em 0.06em 0.08em 0em rgba(0, 0, 0, 0.3), 0em 0.2em 0.4em 0em rgba(0, 0, 0, 0.1);
-  border: 0.02em solid rgba(229, 229, 229, 1);
-  transition: all 0.2s;
-}
-
-.large-text-on {
-  margin-left: 0.15em;
-  color: #fff;
-}
-
-.large-text-off {
-  margin-left: 0.25em;
-  color: #fff;
+.disabled {
+  background-color: $color-primary-2;
+  border-color: $color-primary-3;
+  cursor: not-allowed;
 }

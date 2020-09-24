@@ -1,6 +1,4 @@
-$mainColor:#66CCCC;
-$detailColor:#CCFFCC;
-$blankColor:#f2fffd;
+@import './style/index.scss';
 
 * {
   padding: 0;
@@ -13,8 +11,8 @@ $blankColor:#f2fffd;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: $blankColor;
-  background-color: $mainColor;
+  color: $color-primary-1;
+  background-color: $color-primary-0;
   font-size: 14px;
 }
 
