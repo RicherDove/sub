@@ -1,0 +1,99 @@
+@charset "UTF-8";
+.disabled {
+  background-color: #a0d3ff;
+  border-color: #a0d3ff; }
+
+.off {
+  background-color: rgba(25, 31, 37, 0.12); }
+
+.disappear {
+  visibility: hidden; }
+
+.small-cheek {
+  position: relative;
+  display: inline-block;
+  width: 0.64em;
+  height: 0.42em;
+  line-height: 0.42em;
+  background-color: #108ee9;
+  border-radius: 0.21em; }
+
+.small-cheek .small-round {
+  position: absolute;
+  right: 0.02em;
+  top: 0.02em;
+  width: 0.35em;
+  height: 0.35em;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0em 0.06em 0.08em 0em rgba(0, 0, 0, 0.3), 0em 0.2em 0.4em 0em rgba(0, 0, 0, 0.1);
+  border: 0.02em solid #e5e5e5;
+  transition: all 0.2s; }
+
+.small-text-on {
+  margin-left: 0.08em;
+  color: #fff; }
+
+.small-text-off {
+  margin-left: 0.13em;
+  color: #fff; }
+
+.normal-cheek {
+  position: relative;
+  display: inline-block;
+  width: 2.52em;
+  height: 1.24em;
+  line-height: 1.24em;
+  background-color: orange;
+  border-radius: 0.62em; }
+
+.normal-cheek .normal-round {
+  position: absolute;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0.05em 0em 1em 0px rgba(0, 0, 0, 0.3);
+  border: 0.02em solid #e5e5e5;
+  transition: all 0.2s; }
+
+.normal-text-on {
+  margin-left: 1em;
+  color: #fff; }
+
+.normal-text-off {
+  margin-left: 2em;
+  color: #fff; }
+
+/* 所有的实现都暂时搁置*/
+.large-cheek {
+  position: relative;
+  display: inline-block;
+  width: 1.36em;
+  height: 0.82em;
+  line-height: 0.82em;
+  font-size: 0.35em;
+  background-color: #108ee9;
+  border-radius: 0.41em; }
+
+.large-cheek .large-round {
+  position: absolute;
+  left: 0.57em;
+  top: 0.02em;
+  width: 0.76em;
+  height: 0.76em;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0em 0.06em 0.08em 0em rgba(0, 0, 0, 0.3), 0em 0.2em 0.4em 0em rgba(0, 0, 0, 0.1);
+  border: 0.02em solid #e5e5e5;
+  transition: all 0.2s; }
+
+.large-text-on {
+  margin-left: 0.15em;
+  color: #fff; }
+
+.large-text-off {
+  margin-left: 0.25em;
+  color: #fff; }
+
+/*# sourceMappingURL=Lswitch.css.map */
