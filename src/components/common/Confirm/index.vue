@@ -1,6 +1,5 @@
 <template>
   <div class="confirm" v-if="isShow">
-    <div class="background"></div>
     <div class="content">
       <div class="header">{{ title }}</div>
       <div class="contents">{{ contents }}</div>
@@ -50,7 +49,65 @@ export default {
   },
   computed: {},
 };
+// @import "~css/components/confirm.css";
 </script>
-<style scoped>
-@import "~css/components/confirm.css";
+
+<style lang="scss" scoped>
+@import "@/assets/sass/style/index.scss";
+
+.confirm {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  .content {
+    max-width: 520px;
+    width: 78%;
+    max-height: 220px;
+    height: 21%;
+    background: #ffffff;
+    padding: 0.5em;
+
+    .header {
+      display: flex;
+
+      justify-content: space-between;
+      text-align: center;
+
+      &::after {
+        content: "";
+        background-image: url("../../../assets/img/fork.png");
+        width: 1em;
+        height: 1em;
+
+        &:hover {
+          background-image: url("../../../assets/img/fork_focus.png");
+          width: 1em;
+          height: 1em;
+        }
+      }
+    }
+
+    .contents {
+      text-indent: 2;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-evenly;
+
+      .cancle {
+      }
+
+      .confirm {
+      }
+    }
+  }
+}
 </style>

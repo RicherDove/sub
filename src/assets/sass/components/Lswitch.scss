@@ -63,12 +63,12 @@ $switch-round-height:$switch-height - 0.04em;
       left: $switch-width - $switch-round-height;
     }
 
-    &[data-set="receive"]:active {
+    :not(disabled) &[data-set="receive"]:active {
       left: 0.02em;
       right: $switch-width - $switch-round-height - 0.2em;
     }
 
-    &[data-set="reject"]:active {
+    :not(disabled) &[data-set="reject"]:active {
       right: 0.02em;
       left: $switch-width - $switch-round-height - 0.2em;
     }
